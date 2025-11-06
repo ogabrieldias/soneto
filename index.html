@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I love you</title>
+    <link rel="stylesheet" href="estilo/style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    
+    <header>
+        <h1>Use os meus beijos</h1> 
+        <p>Por <a href="https://www.recantodasletras.com.br/poesias/3186743" target="_blank">Flá Perez</a></p>
+        <form id="nameForm">
+            <label for="fullName">Qual é seu nome completo?</label><br>
+            <input type="text" id="fullName" placeholder="Digite seu nome completo" required>
+            <button type="submit">Enviar</button>
+          </form>
+    </header>
+ 
+    <section class="imagem" id="img04">
+        <p>
+            Use os meus beijos, <br>
+            para se satisfazer. <br>
+            Cada um com um sabor <br>
+            todos dedicados a você. <br>
+        </p>
+    </section>
+
+    <section class="imagem" id="img01">
+        <p>
+            Use os meus beijos, <br>
+            abundantemente quentes, <br>
+            Deliciosamente ardentes, <br>
+            para encharcar-te de prazer. <br>
+        </p>
+    </section>
+
+    <section class="imagem" id="img03">
+        <p>
+            Use-os molhados, <br>
+            Utilize-os dedicados. <br>
+            Busque novas texturas, <br>
+            Aproveite-os com gula. <br>
+        </p>
+    </section>
+
+    <section class="imagem" id="img02">
+        <p>
+            São nos meus beijos, <br>
+            que encontrará, <br>
+            toda a minha “fúria” <br>
+            em possuir você. <br>
+        </p>
+        <p id="finalizando">Entre milhões de estrelas, é na tua luz que me perco.</p>
+    </section>
+
+    <!-- <section class="normal">
+        <p>
+            Agora, escrevo e envio <br>
+            Chegando na mesma hora <br>
+            Mas quando vou prosear <br>
+            A pessoa foi embora <br>
+            Abriu outro aplicativo <br>
+            O mundo ficou cativo <br>
+            Da tecnologia do agora. <br>
+        </p>
+
+        <p>
+            Felizmente, pra orar <br>
+            Não precisa de internet <br>
+            Deus escuta todo mundo <br>
+            Se quiser, faça esse teste <br>
+            Dois pontos são dois joelhos <br>
+            Seus lábios são aparelhos <br>
+            Deixe que Deus interprete.
+        </p>
+    </section> -->
+
+    <footer id="footerMessage">
+        Bem-vindo ao site!
+        <p>Site criado 14/12/2024 por <a href="https://github.com/ogabrieldias" target="_blank">Gabriel Bernardino Dias </a> <br>Três Rios | RJ </p>
+        
+    </footer>
+    <script>
+        const form = document.getElementById('nameForm');
+        const footerMessage = document.getElementById('footerMessage');
+        const submitButton = form.querySelector('button');
+
+        form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Impede o envio do formulário padrão
+        const fullName = document.getElementById('fullName').value.trim();
+        const defaultMessage = `
+            <p>Site criado 14/12/2024 por <a href="https://github.com/ogabrieldias" target="_blank">Gabriel Bernardino Dias</a> <br>Três Rios | RJ</p>
+        `;
+
+        if (fullName) {
+            footerMessage.innerHTML = `Eu te amo, ${fullName}! ${defaultMessage}`;
+            submitButton.disabled = true; // Desabilita o botão após o envio
+        } else {
+            footerMessage.innerHTML = `Por favor, insira seu nome. ${defaultMessage}`;
+        }
+        });
+
+    </script>
+</body>
+</html> 
